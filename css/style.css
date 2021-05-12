@@ -1,0 +1,106 @@
+:root{
+    --white-text:#fff;                          /**eleccion del color**/
+}
+*{
+    padding: 0;                                   /**reseteamos todos los estilos**/
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(174,58,180);
+    background: linear-gradient(90deg, rgba(174,58,180,1)0%,rgba(63,190,251,1)50%,rgba(174,58,180,1)100%);
+}
+.container{
+    display: flex;
+    justify-content: center;                      /**Aqui centramos**/
+    height: 100vh;
+    align-items: center;
+}
+.card{                                           /**tarjeta principal**/
+    border: 1rem;                                 /**1rem sería igual a 16px**/
+    box-shadow: 0 1rem 1rem rgba(0,0,0,0.2);    /**sombreado**/
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    overflow: hidden;
+    width: 25rem;                                /**ancho fijo**/
+    height: 35rem;                                /**alto fijo**/
+    background-color: rgba(255,255,255,0.070);
+    backdrop-filter: blur(1rem);
+    color: var(--white-text);                     /**cambiamos todo texto a color blanco**/  
+}
+.top-row{                                         /**encabezado de los iconos**/
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.top-row i{                                     /*  Icono USER        */
+    font-size: 6rem;
+}
+.content{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;              /**espaciado de los elemtos**/
+    height:100%;
+}
+.content i{                                     /**icono Candado**/
+    font-size: 3.5rem;                          
+}
+.content p{                                 
+    font-size: .9rem;
+    align-self: flex-start;                     /**alineando al principio**/
+}
+.text{                                          /**estilo de las cajas**/
+    width: 100%;
+    height: 3rem;
+    color: rgb(97,94,94);
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+.button{                                        /**boton Enter**/
+    /*border-radius: 3rem;*/
+    color: var(--white-text);
+    font-size: 1.2rem;
+    padding: .5rem .3rem;
+    letter-spacing: .1rem;
+    background-color: rgba(172,58,180,.3);
+    width: 85%;
+    height: 10%;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 10px 5px 5px black;             /*sombreado del boton*/
+}
+.button:hover {
+    background: rgba(0,0,0,0);
+    color: #d4dce0;
+    box-shadow: inset 0 0 0 3px #3a7999;
+}
+
+a.button2{
+    border-radius: 1rem;
+    color: black;
+    font-size: .9rem;
+    padding: .5rem .3rem;
+    letter-spacing: .1rem;
+    background-color: rgba(172,58,180,.3);
+}
+a.button2:hover {
+    background: rgba(0,0,0,0);
+    color: #31424b;
+    box-shadow: inset 0 0 0 3px #c4d1d8;
+}
+
+@media(max-width:1080px){                   /**a la tarjeta la podemos cambiar permite que haga Scroll **/
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+}
